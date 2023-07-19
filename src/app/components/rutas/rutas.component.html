@@ -1,0 +1,19 @@
+<section class="info">
+    <h1 style="padding-bottom: 20px;">Transportes <small> Latam</small></h1>
+    <div class="col animated fadeIn fast" *ngFor="let ruta of rutas; let i=index">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ruta.CiudadOrigen}}</h5>
+                        <p class="card-text" style="text-align: justify;">{{ruta.CiudadDestino}}</p>
+                        <p class="card-text"><small class="text-body-secondary">{{ruta.Tipo}} <br>{{ruta.PrecioRuta}}<br>{{ruta.Descripcion}}</small></p>
+                        <button (click)="VerRutas(i)" type="button" class="btn btn-primary" style="padding-left: 15px; padding-right: 15px;"> +info </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
